@@ -18,3 +18,9 @@ values
 ('Nike Air',5,499,2495); 
 
 select* from sales_data;
+SELECT 
+    product_name AS product,
+    SUM(unit_sold) AS total_qty,
+    SUM(total_revenue) AS revenue
+FROM sales_data
+GROUP BY product_name
